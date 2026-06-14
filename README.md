@@ -34,6 +34,25 @@ This repository is **a hub** for dialogue and design around the commons — not 
 - ❓ **いま議論したい論点**: [`docs/open-questions.md`](docs/open-questions.md)
 
 ---
+## コモンズを構成する「3つの国家資産」/ The Three Core Assets
+
+すべての製造物や食料（生産物）は、国家が持つ以下の**3つの資産**の掛け合わせによって生まれます。私たちはこれらを「誰のものか」と再定義し、AI時代の適正な取引価格（清算のルール）を設計します。
+
+Every product and resource is born from a combination of **three core assets**. We redefine who truly owns them to design a fair trading price and protocol for giving back in the AI era.
+
+| 資産の分類 / Asset Type | 本来の持ち主 / True Owner | コモンズとしての扱いと清算 / Treatment & Resolution |
+| :--- | :--- | :--- |
+| **1. 地球資源**<br>(Global Resources) | **地球に住むすべての人**<br>(All inhabitants of Earth) | 資源は誰の私有物でもない「地球のコモンズ」です。資源を消費して富を生む際、その価格には「地球への感謝代（コモンズ税）」が上乗せされ、資源の乏しい国や次世代へ自動的に分配・還流されます。 |
+| **2. 知財資産**<br>(Intellectual Property) | **それを生み出した国・人々**<br>(The nations & creators who birthed it) | 知識や技術は「使っても減らない」特性を持ちます。富裕国にはフル価値で取引して生み手に報いる一方、困窮国には知財コストを0円として開放（傾斜価格）し、人類が平等に恩恵を享受できる仕組みを作ります。 |
+| **3. 労働資産**<br>(Labor Assets) | **各国の労働者そのもの**<br>(The individual workers of each nation) | 製造現場の汗やAIへの知恵の提供は、その国の労働資産です。通貨の強弱による不当な買い叩きを排除し、人間の行動に対して正当な対価がその国の労働者へ清算されるルートを確保します。 |
+
+### 国ごとに異なる取引価格の必要性 / Contextual Pricing per Nation
+欲しいものが他国にあれば安く買いたくなるのが人間の心理です。しかし、これからは製品の「履歴書（3つの資産がどう清算されたか）」が可視化されます。
+世界の消費者は「良い国か悪い国か」を見抜き、消費という投票行動を通じて、国ごとに異なる適正な取引価格をボトムアップで承認していくことになります。AIは、この複雑な資源・知財・労働のバランスをリアルタイムでシミュレーションし、世界へ平等に分配するための「地球の計算機」として機能すべきです。
+
+While individuals naturally seek the lowest price, the "resume" of every product (how these three assets were paid back) will become transparent. Consumers worldwide will recognize "good nations" from "bad nations," using their purchasing power to approve contextual pricing from the bottom up. AI must serve as Earth's calculator to optimize this planetary distribution.
+
+---
 
 ## 中核の仕組み / Core mechanism
 
