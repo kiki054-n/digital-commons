@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use or refer to this work, please cite it as below."
+title: "ポスト資本主義における多国間デジタル・コモンズの構築：中堅7カ国（C7）による二階層通貨システムと資源・技術の相殺ガバナンス"
+abstract: >-
+  自然環境やオープンソース・テクノロジーといったコモンズを収奪し巨大資本へ富を集中させる
+  現代資本主義の構造的欠陥に対し、米中に依存しない中堅7カ国（C7）による互助的経済圏を提案する。
+  各国の国内通貨とC7間決済専用通貨「Common」を分離する二階層通貨システムを採用し、
+  Purpose Bound Money（PBM）と潜在資源相互評価指数（CCPI）により技術・資源・文化を等価相殺・
+  リバランスするガバナンス機構を定義する。
+type: preprint
+authors:
+  - family-names: "川上"
+    given-names: "真潔"
+    alias: "Kawakami, Naoyuki"
+    orcid: "https://orcid.org/0009-0009-2972-6511"
+    affiliation: "Team Shiojiri / Cooperate Craft Wine Makers"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20685859
+    description: "Zenodo published version"
+date-released: 2026-06-14
+license: CC-BY-4.0
+keywords:
+  - ポスト資本主義
+  - コモンズ・ガバナンス
+  - 二階層通貨
+  - Purpose Bound Money
+  - 国際清算同盟
+  - 潜在資源相互評価指数
+  - 知識コモンズ
+  - Ubuntu
+repository: "https://doi.org/10.5281/zenodo.20685859"
