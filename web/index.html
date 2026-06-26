@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>コモンズを、どう分かち合うか — 公開討議 | Digital Commons</title>
-<meta name="description" content="知識・技術・文化・自然——人類の共有財をめぐる6つの未解決の問い。あなたの考えを聞かせてください。">
-<meta property="og:title" content="コモンズを、どう分かち合うか — 公開討議">
-<meta property="og:description" content="人類の共有財をめぐる6つの未解決の問い。あなたのコメントを募集しています。">
+<title>WHY — なぜ、あなたはそれをするのか | Digital Commons</title>
+<meta name="description" content="「何をしているか」ではなく「なぜ、それをするのか」。あなたを動かす理由を、一文で聞かせてください。">
+<meta property="og:title" content="WHY — なぜ、あなたはそれをするのか">
+<meta property="og:description" content="あなたを動かす「なぜ」を、一文で。共感から、コモンズの設計へ。">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://kiki054-n.github.io/digital-commons/web/assets/why_card_og_light.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -119,6 +121,43 @@
     .card{grid-template-columns:48px 1fr; gap:6px 16px}
     .num svg{width:40px; height:40px}
   }
+
+  /* manifesto */
+  .manifesto{padding:48px 0 8px}
+  .manifesto p{font-size:16px; color:var(--ink); margin:0 0 20px; line-height:1.95}
+  .manifesto .pull{font-family:var(--serif); font-weight:500; font-size:clamp(19px,3.2vw,25px);
+    line-height:1.7; color:var(--ink); margin:30px 0; text-align:center}
+  .manifesto .mine{border-left:2px solid var(--teal); padding-left:20px; color:var(--ink-soft)}
+  .manifesto .hands{font-family:var(--serif); font-weight:500; font-size:clamp(18px,3vw,22px);
+    color:var(--ink); text-align:center; margin:40px 0 4px; line-height:1.7}
+
+  /* my-why fill-in */
+  .mywhy{border:1px solid var(--line-strong); border-radius:18px; padding:34px 26px;
+    margin:30px 0 10px; background:var(--card)}
+  .mywhy h2{font-family:var(--serif); font-weight:700; font-size:clamp(22px,3.6vw,28px);
+    margin:0 0 6px; color:var(--ink); text-align:center}
+  .mywhy .hint{text-align:center; color:var(--ink-soft); font-size:14px; margin:0 0 24px}
+  .mywhy .form{font-family:var(--serif); font-size:clamp(17px,2.8vw,21px); color:var(--ink);
+    line-height:2.4; text-align:center}
+  .mywhy .form input{font-family:var(--sans); font-size:16px; color:var(--ink); background:transparent;
+    border:none; border-bottom:2px solid var(--line-strong); padding:4px 10px; min-width:150px;
+    max-width:90%; text-align:center; outline:none; transition:.2s}
+  .mywhy .form input::placeholder{color:var(--ink-soft); opacity:.55}
+  .mywhy .form input:focus{border-bottom-color:var(--teal)}
+  .mywhy .preview{margin:22px auto 0; min-height:1.4em; max-width:34em; font-family:var(--serif);
+    font-size:16px; color:var(--ink-soft); text-align:center; line-height:1.8}
+  .mywhy .actions{text-align:center; margin-top:22px}
+  .mywhy button{font-family:var(--mono); font-size:13px; letter-spacing:.04em; cursor:pointer;
+    background:var(--teal); color:var(--paper); border:none; border-radius:999px;
+    padding:13px 28px; transition:.2s}
+  .mywhy button:hover{background:var(--teal-deep)}
+
+  /* toast */
+  .toast{position:fixed; left:50%; bottom:28px; transform:translateX(-50%) translateY(20px);
+    background:var(--ink); color:var(--paper); font-family:var(--mono); font-size:13px;
+    text-align:center; max-width:88vw; padding:13px 22px; border-radius:14px; opacity:0;
+    pointer-events:none; transition:.3s; z-index:50}
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
 </style>
 </head>
 <body>
@@ -133,19 +172,42 @@
     <path d="M37 6 a31 31 0 1 1 -6 0.6" fill="none" stroke="var(--ring)" stroke-width="2" stroke-linecap="round"/>
     <circle cx="37" cy="37" r="31" fill="none" stroke="transparent" stroke-width="2"/>
   </svg>
-  <p class="eyebrow">公開討議 ・ Open dialogue</p>
-  <h1>コモンズを、<br>どう分かち合うか</h1>
-  <p>知識・技術・文化・自然——人類の共有財（コモンズ）をめぐる、まだ答えの出ていない6つの問い。専門家でなくてかまいません。あなたの考えを聞かせてください。</p>
-  <a class="scroll-cue" href="#questions">問いを読む ↓</a>
+  <p class="eyebrow">WHY</p>
+  <h1>なぜ、あなたは<br>それをするのか</h1>
+  <p>「何をしているか」ではなく、「なぜ、それをするのか」。あなたを動かす理由を、一文でいい、聞かせてください。共感は、そこから始まります。</p>
+  <a class="scroll-cue" href="#mywhy">自分の「なぜ」を書く ↓</a>
 </header>
 
 <main class="wrap">
 
-  <section class="lead">
-    <p><strong>なぜ問うのか。</strong> 私たちはいま、論文『ポスト資本主義における多国間デジタル・コモンズの構築』を出発点に、知識や資源といった「みんなのもの」を、奪い合わずに分かち合う仕組みを設計しようとしています。けれど、まだ決まっていないことがたくさんあります。立場の違う声こそ、この設計に必要です。反論も歓迎します。</p>
+  <section class="manifesto">
+    <p>私たちは、互いを「何を」しているかで測ろうとする。肩書き、職業、所属、実績。けれど、それはあなたではない。人と人を、ほんとうにつなぐのは「なぜ」だ。</p>
+    <p class="pull">なぜ、あなたはそれを続けているのか。<br>誰にも頼まれず、報酬がなくても、してしまうのは、なぜか。</p>
+    <p>いちばん深く満足できる仕事は、たぶん一生かかっても終わらない。孤高の職人は、未完のまま、それを次の誰かへ託して逝く。託された者もまた、最高を目指し、完成させられず、さらに次へ託す。——一代で終わる夢は、小さすぎたのだ。終わらないことこそが、その夢が追うに値した証しになる。</p>
+    <p>知っていることを、人に教える。それは損ではない。教えた者は、今いる場所から解き放たれ、次の高みへ昇れる。独り占めした者は、その場所に縛られて動けない。分かち合う者だけが、前へ進む。——オープンソースが、最初から知っていた秘密だ。</p>
+    <p>人は、追い続けられる夢がなければ、内側から静かに腐る。</p>
+    <p class="mine">これが、私の「なぜ」だ——奪い合う世界を、分かち合う世界へ。閉じた環を、開いた輪へ。作れる人が作り、足りない人へ巡り、生んだ喜びが源へ還る。そんな仕組みを見たい。私一人では、終わらない。だからこうして、あなたに託している。</p>
+    <p class="hands">自分の手を見てほしい。その手は、なぜ、それを作るのか。</p>
   </section>
 
-  <p class="q-head" id="questions">6つの問い / Six open questions</p>
+  <section class="mywhy" id="mywhy">
+    <h2>あなたの番です</h2>
+    <p class="hint">一文でかまいません。下の空欄を埋めると、あなたの「なぜ」が一文になります。</p>
+    <div class="form">
+      私は、<input id="mw-who" type="text" placeholder="例：パンを焼く" aria-label="あなたがしていること">。<br>
+      なぜなら、<input id="mw-why" type="text" placeholder="例：誰かの朝を温めたい" aria-label="その理由">から。
+    </div>
+    <p class="preview" id="mw-preview"></p>
+    <div class="actions">
+      <button id="mw-copy" type="button">この一文をコピーして投稿へ ↓</button>
+    </div>
+  </section>
+
+  <section class="lead">
+    <p><strong>なぜ、これを始めたのか。</strong> 私の「なぜ」は、いつしか一つの構想になりました——知識や資源といった「みんなのもの」を、奪い合わずに分かち合う仕組み。論文『ポスト資本主義における多国間デジタル・コモンズの構築』は、その設計図です。けれど、まだ決まっていないことが多い。だから、あなたの「なぜ」と、あなたの考えが要るのです。</p>
+  </section>
+
+  <p class="q-head" id="questions">私の「なぜ」は、こんな問いになった / The questions my "why" became</p>
 
   <article class="card" id="q1">
     <span class="num">
@@ -154,7 +216,7 @@
     <div>
       <h3>価値は、お金以外でどう測れるか</h3>
       <p class="en">How do we measure value without market price?</p>
-      <p>ある国の技術、別の国の資源、また別の国の文化——質のまるで違うものを、市場価格に頼らずに「等価」と認め合うには、何を基準にすればいいでしょう。あなたなら、何で測りますか。</p>
+      <p>私たちの今の答えは「あらゆる製品は、①地球資源・②知財・③労働という三つの資産の掛け合わせで生まれる。だから価値とは、この三つを“誰のものか”として、どう清算したかだ」というもの。これがCCPI（評価指数）の出発点です。——でも、これで測りきれますか。何が抜けていますか。</p>
       <div class="act"><a class="btn primary" href="#say">この問いに答える ↓</a></div>
     </div>
   </article>
@@ -200,9 +262,9 @@
       <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 5 a23 23 0 1 1 -4 0.4" fill="none" stroke="var(--ring)" stroke-width="1.5"/><text x="28" y="34" text-anchor="middle" font-family="Space Mono, monospace" font-size="18" fill="var(--ink)">5</text></svg>
     </span>
     <div>
-      <h3>なぜ、この7カ国なのか</h3>
-      <p class="en">Why these seven nations — and who else?</p>
-      <p>日本・フランス・ノルウェー・カナダ・オーストラリア・シンガポール・南アフリカ。この顔ぶれは妥当でしょうか。入れ替えるなら、あなたはどの国を、どんな理由で加えますか。</p>
+      <h3>この7カ国は、本当に協調できるのか</h3>
+      <p class="en">Can these seven nations actually cooperate — the first hurdle?</p>
+      <p>日本・フランス・ノルウェー・カナダ・オーストラリア・シンガポール・南アフリカ。どんなに巧みな仕組みも、この7カ国が手を組めなければ動きません。これが最初に越えるべき関門です。協調は可能だと思いますか。妨げになるのは何でしょう。入れ替えるなら、どの国を、なぜ。</p>
       <div class="act"><a class="btn primary" href="#say">この問いに答える ↓</a></div>
     </div>
   </article>
@@ -220,9 +282,9 @@
   </article>
 
   <section class="comments" id="say">
-    <h2>あなたの声を、ここに</h2>
-    <p class="sub">どの問いでもかまいません。コメントの頭に「Q3」のように番号を添えていただけると、対話が追いやすくなります。</p>
-    <p class="note">コメントには GitHub アカウントでのサインインが必要です（誰でも無料で作れます）。寄せられた声は、母艦リポジトリの Discussions に記録され、みんなで読めます。</p>
+    <h2>なぜの壁</h2>
+    <p class="sub">上で作った一文を貼り付けても、どの問いへの考えでも歓迎です。コメントの頭に「Q3」のように番号を添えると、対話が追いやすくなります。</p>
+    <p class="note">コメントには GitHub アカウントでのサインインが必要です（誰でも無料で作れます）。寄せられた「なぜ」と声は、母艦リポジトリの Discussions に記録され、みんなで読めます。</p>
     <div class="giscus"></div>
   </section>
 
@@ -270,7 +332,40 @@
     var box=document.querySelector('.giscus');
     if(s&&box){box.appendChild(s);}
   });
+
+  // 「私は___、なぜなら___」一文ジェネレーター
+  (function(){
+    var who=document.getElementById('mw-who'), why=document.getElementById('mw-why');
+    var prev=document.getElementById('mw-preview'), btn=document.getElementById('mw-copy');
+    var toast=document.getElementById('toast');
+    if(!who||!why||!btn) return;
+    function compose(){
+      var a=(who.value||'').trim()||'＿＿＿', b=(why.value||'').trim()||'＿＿＿';
+      return '私は、'+a+'。なぜなら、'+b+'から。';
+    }
+    function update(){ prev.textContent='「'+compose()+'」'; }
+    who.addEventListener('input',update); why.addEventListener('input',update); update();
+    function showToast(msg){
+      toast.textContent=msg; toast.classList.add('show');
+      setTimeout(function(){ toast.classList.remove('show'); }, 3600);
+    }
+    function go(){
+      showToast('コピーしました。下のコメント欄に貼り付けて投稿してください。');
+      var c=document.getElementById('say'); if(c) c.scrollIntoView({behavior:'smooth'});
+    }
+    btn.addEventListener('click',function(){
+      var text=compose();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(go).catch(go);
+      } else {
+        var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+        ta.select(); try{ document.execCommand('copy'); }catch(e){} document.body.removeChild(ta); go();
+      }
+    });
+  })();
 </script>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 </body>
 </html>
